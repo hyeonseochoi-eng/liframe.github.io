@@ -1,0 +1,184 @@
+/* 1. 기본 초기화 및 폰트 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #ffffff;
+    color: #1d1d1f; /* 애플이 주로 쓰는 고급스러운 다크 그레이 */
+    line-height: 1.6;
+    letter-spacing: -0.02em; /* 글자 간격을 살짝 좁혀 단정한 느낌 유도 */
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 2. 상단 네비게이션 (애플 스타일의 절제된 헤더) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* 뒤가 살짝 비치는 반투명 효과 */
+    backdrop-filter: blur(20px); /* 흐림 효과 */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-menu a {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #86868b; /* 평소엔 연한 회색 */
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #1d1d1f; /* 마우스를 올리면 진해짐 */
+}
+
+/* 3. 섹션 공통 여백 (블루보틀/라이카 감성의 시원한 여백) */
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 2rem; /* 위아래 여백을 넓게 주어 시선 집중 */
+}
+
+.section-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #86868b;
+    margin-bottom: 3rem;
+}
+
+/* 4. 히어로 섹션 (첫 인상 - 극도의 미니멀리즘) */
+#hero {
+    height: 100vh; /* 화면 높이를 100% 다 채움 */
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+    padding-top: 80px;
+}
+
+.hero-content .subtitle {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #86868b;
+    margin-bottom: 1rem;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 300; /* 얇은 폰트로 고급스럽게 */
+    line-height: 1.4;
+    word-break: keep-all; /* 한글 단어가 어색하게 깨지지 않게 만듦 */
+}
+
+/* 5. 포트폴리오 그리드 (라이카 갤러리 스타일) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 깔끔하게 2열로 배치 */
+    gap: 3rem; /* 작품 사이의 넓은 간격 */
+}
+
+.grid-item {
+    cursor: pointer;
+}
+
+.img-box {
+    width: 100%;
+    aspect-ratio: 3 / 2; /* 사진 비율 고정 (라이카 카메라 표준 비율) */
+    overflow: hidden;
+    background-color: #f5f5f7; /* 사진이 로딩되기 전 채워질 연한 회색 바탕 */
+    margin-bottom: 1rem;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 프레임에 맞게 사진을 꽉 채움 */
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); /* 부드러운 확대 효과 */
+}
+
+/* 마우스를 올렸을 때 사진이 아주 미세하고 우아하게 확대되는 효과 */
+.grid-item:hover .img-box img {
+    transform: scale(1.03);
+}
+
+.item-info h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+}
+
+.item-info p {
+    font-size: 0.9rem;
+    color: #86868b;
+}
+
+/* 6. 소개 섹션 (About) */
+.about-content {
+    max-width: 600px; /* 글이 너무 길게 늘어지지 않도록 너비 제한 */
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #515154;
+    margin-bottom: 1.5rem;
+    word-break: keep-all;
+}
+
+/* 7. 하단 영역 (Footer) */
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 3rem 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #86868b;
+}
+
+/* 반응형 설정 (모바일 스마트폰 화면용) */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    .grid-container {
+        grid-template-columns: 1fr; /* 모바일에서는 1열로 세로 정렬 */
+        gap: 2rem;
+    }
+    section {
+        padding: 80px 1.5rem;
+    }
+}
