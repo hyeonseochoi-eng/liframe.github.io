@@ -261,3 +261,135 @@ footer {
     text-align: center; /* 해설은 가운데 정렬로 단정하게 */
     word-break: keep-all;
 }
+/* ==========================================
+   9. 확장된 6개 그리드 및 레이아웃 최적화
+========================================== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 💡 6개 섹션이므로 3열씩 단정하게 배치 */
+    gap: 3rem 2rem; /* 위아래 간격은 넓게, 좌우는 적당하게 */
+}
+
+/* ==========================================
+   10. Contact 섹션 (애플 & 블루보틀 감성)
+========================================== */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-image {
+    width: 100%;
+    max-width: 900px; /* 가로 사진이 시원하게 보일 최적의 너비 */
+    aspect-ratio: 16 / 9; /* 가로형 표준 황금 비율 */
+    overflow: hidden;
+    background-color: #f5f5f7;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(10%) brightness(0.98); /* 차분한 라이카 톤 분위기 */
+}
+
+.contact-details {
+    display: flex;
+    gap: 5rem; /* 이메일과 인스타 사이의 넓은 여백 */
+    text-align: center;
+}
+
+.contact-item .label {
+    display: block;
+    font-size: 0.75rem;
+    color: #86868b;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+}
+
+.contact-item a {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #1d1d1f;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #0066cc; /* 애플 특유의 블루 포인트 컬러 */
+}
+
+/* ==========================================
+   11. 모달 팝업 내부 (개별 제목 + 해설 디자인)
+========================================== */
+.modal-gallery {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem; /* 사진과 사진 사이를 액자처럼 시원하게 띄움 */
+}
+
+.modal-image-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-image-wrapper img {
+    max-height: 80vh; /* 사진이 화면을 넘치지 않게 조절 */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    background-color: #fafafa;
+}
+
+/* 개별 사진 밑에 들어갈 캡션 박스 */
+.modal-item-caption-box {
+    margin-top: 1.5rem;
+    text-align: center;
+    max-width: 550px; /* 글이 옆으로 너무 퍼지지 않게 제한 */
+}
+
+.modal-item-title {
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #1d1d1f;
+    margin-bottom: 0.5rem;
+}
+
+.modal-item-caption {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #6e6e73;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+/* ==========================================
+   12. 스마트폰 모바일 반응형 대응
+========================================== */
+@media (max-width: 968px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 태블릿에선 2열 */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 모바일에선 무조건 1열 세로 정렬 */
+    }
+    .contact-details {
+        flex-direction: column; /* 모바일에선 이메일, 인스타가 위아래로 */
+        gap: 2rem;
+    }
+    .contact-item a {
+        font-size: 1.1rem;
+    }
+    .modal-image-wrapper {
+        gap: 4rem;
+    }
+}
