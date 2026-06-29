@@ -73,42 +73,17 @@ const portfolioData = [
     },
     {
         id: 5,
-        title: "순수(예술)사진",
+        title: "순수사진",
         category: "Fine Art Photography",
-        imgUrl: "images/portfolio/p5_main.jpg", // 순수미술 대표 사진 경로
-        description: "나만의 예술세계를 담은 사진으로 또 다른 이야기를 전달합니다.",
+        imgUrl: "images/hero/moss_light.jpg", // 순수미술 대표 사진 경로
+        description: "사진으로 우리에게 전할수 있는건 한계가 있습니다. 사진이 무의식적으로 전하는 언어와, 의식적으로 전할 수 있는 언어의 수단, 모스 부호를 접목시킨 예술세계를 기록하고 있습니다.",
         subImages: [
-            { url: "images/portfolio/p5_01.jpg", title: "순수예술 작품 1", caption: "첫 번째 순수예술 사진의 해설을 적으세요." },
-            { url: "images/portfolio/p5_02.jpg", title: "순수예술 작품 2", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p5_03.jpg", title: "순수예술 작품 3", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p5_04.jpg", title: "순수예술 작품 4", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p5_05.jpg", title: "순수예술 작품 5", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p5_06.jpg", title: "순수예술 작품 6", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p5_07.jpg", title: "순수예술 작품 7", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p5_08.jpg", title: "순수예술 작품 8", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p5_09.jpg", title: "순수예술 작품 9", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p5_10.jpg", title: "순수예술 작품 10", caption: "마지막 순수예술 사진의 해설입니다." }
+            { url: "images/hero/moss_light.jpg", title: "빛", caption: "빛은 우리가 세상을 보게 하는 가장 기초적인 수단입니다." },
+            { url: "images/hero/moss_flower.jpg", title: "꽃잎", caption: "봄의 꽃 하면 가장 먼저 생각나는 벚꽃, 분홍빛 사이 스며든 흑백으로 나타낸 꽃은 색다른 모습으로 다가옵니다" },
         ]
     },
-    {
-        id: 6,
-        title: "행사사진",
-        category: "Event Photography",
-        imgUrl: "images/portfolio/p6_main.jpg", // 행사 대표 사진 경로
-        description: "열정 넘치는 행사를 생생하게, 현장에 있듯 담아드립니다.",
-        subImages: [
-            { url: "images/portfolio/p6_01.jpg", title: "행사 작품 1", caption: "첫 번째 행사 사진의 해설을 적으세요." },
-            { url: "images/portfolio/p6_02.jpg", title: "행사 작품 2", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p6_03.jpg", title: "행사 작품 3", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p6_04.jpg", title: "행사 작품 4", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p6_05.jpg", title: "행사 작품 5", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p6_06.jpg", title: "행사 작품 6", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p6_07.jpg", title: "행사 작품 7", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p6_08.jpg", title: "행사 작품 8", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p6_09.jpg", title: "행사 작품 9", caption: "해설을 채워 넣으세요." },
-            { url: "images/portfolio/p6_10.jpg", title: "행사 작품 10", caption: "마지막 행사 사진의 해설입니다." }
-        ]
-    }
+    
+
 ];
 
 // 2. 메인 화면에 포트폴리오 그리드를 그려주는 함수
